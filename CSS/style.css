@@ -128,7 +128,13 @@ header .fa-bars{
 .break-fast-inner{
     flex: 0 0 23%;
     max-width: 23%;
-    
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+.break-fast-inner.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 .break-fast-inner img{
     width: 100%;
@@ -146,18 +152,30 @@ header .fa-bars{
 }
 .contact-1{
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+.contact-1.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 .contact-2{
     text-transform: capitalize;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 1s ease-in-out;
+}
+.contact-2.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 .contact-left{
     display: flex;
     margin-top: 100px;
     
 }
-.contact-left.show{
-    transform: translateY(-50px);
-}
+
 
 .contact-detail{
     flex: 100%;
