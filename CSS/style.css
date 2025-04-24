@@ -154,7 +154,7 @@ header .fa-bars{
     text-transform: uppercase;
     opacity: 0;
     transform: translateY(100px);
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 .contact-1.visible{
     opacity: 1;
@@ -170,13 +170,14 @@ header .fa-bars{
     opacity: 1;
     transform: translateY(0);
 }
+/* ==== contact-left ==== */
+
+
 .contact-left{
     display: flex;
     margin-top: 100px;
     
 }
-
-
 .contact-detail{
     flex: 100%;
     flex-direction: column;
@@ -185,8 +186,7 @@ header .fa-bars{
     display: flex;
     align-items: center;
     height: 300px;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap; 
 }
 .icon-detail{
     width: 60px;
@@ -201,8 +201,7 @@ header .fa-bars{
     font-size: 30px;
     position: relative;
     left: 17px;
-    top: 12px;
-    
+    top: 12px;  
 }
 .fix-phone-icon {
     transform: rotate(90deg);
@@ -225,6 +224,73 @@ header .fa-bars{
     text-transform: capitalize;
     letter-spacing: 1px;
 }
+/* ==== contact-right ==== */
+
+.contact-right {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .contact-name-email {
+    display: flex;
+    flex-direction: row; /* ← Ye line change karni hai */
+    width: 100%;
+    max-width: 700px;
+  }
+  
+.left-contact{
+    flex: 0 0 50%;
+    
+    max-width: 50%;
+}
+.input-0{
+    margin-top: 15px;
+}
+
+#email{
+   width: 100%;
+   border: none;
+   border-bottom: 1px solid black;
+   padding: 20px 2px;
+}
+#name{
+   width: 100%;
+   padding: 5px 10px;
+   border: none;
+   border-bottom: 1px solid black;
+   padding: 20px 2px;
+ }
+ #phone{
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 20px 2px;
+  }
+  .height-line{
+    margin-left: 20px;
+    border: 1px solid black;
+    height: 400px;
+    width: 2px;
+  }
+  .right-contact {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 20px;
+    margin-left: 20px;
+  }
+
+  #message{
+    border: none;
+    width: 350px;
+    height: 150px;
+    font-size: 17px;
+    padding: 1px 3px;
+  }
+  
 
 /* ==== map ==== */
 .map{
@@ -236,7 +302,6 @@ header .fa-bars{
     width: 100%;
     height: 700px;
 }
-
 /* ==== footer ==== */
 footer{
     background: var(--skin-color);
@@ -337,6 +402,7 @@ footer h1{
      flex: 0 0 45%;
      max-width: 45%;
        }
+       
 
        .summary{
         flex: 0 0 45%;
@@ -444,5 +510,26 @@ footer h1{
         }
 
   }
-
+  @media (max-width: 768px) {
+    .contact-name-email {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .left-contact,
+    .right-contact {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-left: 0;
+      padding-left: 0;
+    }
+  
+    .height-line {
+      display: none; /* Line ko hide kar dena chhoti screen par */
+    }
+  
+    #message {
+      width: 100%;
+    }
+  }
     
