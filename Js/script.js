@@ -8,7 +8,7 @@ function demo() {
 
   let cards = document.querySelectorAll('.break-fast-inner,.contact-1, .contact-2');
 
-  function animateCardsOnScroll() {
+  function animateCardsOnScroll () {
     cards.forEach(card => {
       const cardTop = card.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
@@ -24,4 +24,35 @@ function demo() {
 
 
 
+
+
+//  let card = document.querySelectorAll('.break-fast-inner').forEach((card, index) => {
+//     card.addEventListener('click', () => {
+//       const popup = document.querySelectorAll('.popup')[index];
+//       popup.style.display = 'flex';  // Popup ko show karo
+//     });
+//   });
   
+
+let card = document.querySelectorAll('.break-fast-inner').forEach((card, index) => {
+card.addEventListener('click',() =>{
+  let popups =document.querySelectorAll('.popup')[index];
+  popups.style.display='flex';
+});
+});
+
+
+
+
+
+
+
+  document.querySelectorAll('.close-btn').forEach(closeBtn => {
+    closeBtn.addEventListener('click', () => {
+      const popup = closeBtn.closest('.popup');
+      popup.style.display = 'none'; // Popup ko hide karo
+    });
+  });
+  
+  
+
