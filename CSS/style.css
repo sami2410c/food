@@ -11,12 +11,14 @@
 }
 
 header{
-   background-color: white;
+   background-color: steelblue;
    display: flex;
-   height: auto;
+   height: 100px;
    flex-wrap: wrap;
+   box-shadow: 15px 15px 10px rgba(100, 150, 200, 0.15);
    align-items: center;
    z-index: 1000;
+   border-bottom: 2px solid black;
    width: 100%;
    position: fixed;
    justify-content: space-around;
@@ -40,7 +42,7 @@ header{
 .nav-items li ::after{
     content: '';
     width: 0;
-    background-color: #6c0808;
+    background-color: black;
     height: 2px;
     position: absolute;
     left: 0;
@@ -51,7 +53,7 @@ header{
     width: 100%;
 }
 .nav-items li a{
-    color: var(--text-black-700);
+    color: white;
     text-decoration: none;
 }
 header #toggler{
@@ -67,11 +69,54 @@ header .fa-bars{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    }
+}
+.nav-icons .fa-user{
+    cursor: pointer;
+    font-size: 18px;
+    transition: all ease 0.3s;
+}
+.nav-icons .fa-user:hover{
+    color: white;
+}
+
+.user-input {
+   position: absolute;
+   flex-wrap: wrap;
+   display: flex;
+   flex-direction: column;
+   top: 100px;  /* ya jitna bhi offset chahiye */
+   right: 140px;
+  
+}
+.user-input {
+    margin-top: 10px;
+    display: none;
+
+}
+#useremail, #userpassword{
+    background-color: moccasin;
+    color: white;
+
+}
+body, button, a, input, textarea, select, .fa-user, .contact-button {
+  cursor: none !important;
+}
+.cursor {
+  width: 30px;
+  height: 30px;
+  border: 2px solid red;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.05s ease;
+  z-index: 9999;
+}
+
 /* slider */
 .slider img{
-    height: 480px;
-    margin-top: 100px;
+    height: 100vh;
+    width: 100%;
 }
 .break{
     position: absolute;
@@ -318,6 +363,7 @@ header .fa-bars{
     border-bottom: 1px solid black;
     padding: 20px 2px;
   }
+ 
   .height-line{
     margin-left: 20px;
     border: 1px solid black;

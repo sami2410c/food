@@ -56,3 +56,41 @@ card.addEventListener('click',() =>{
   
   
 
+
+
+let userIcon = document.querySelector('.fa-user');
+let Inputs = document.querySelectorAll('.user-input');
+
+userIcon.addEventListener('click', () =>{
+  Inputs.forEach(input2 =>{
+    if (input2.style.display === 'block')
+    {
+      input2.style.display='none';
+
+    }
+    else{
+       input2.style.display='block';
+
+    }
+  });
+});
+
+
+function save(){
+
+  let email = document.getElementById("useremail").value;
+  let password = document.getElementById("userpassword").value;
+
+  localStorage.setItem("email key", email)
+  localStorage.setItem("password key", password)
+
+  alert("data insert")
+}
+
+
+const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
