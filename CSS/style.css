@@ -636,6 +636,12 @@ footer h1{
 
 
 /* ==== mediaqurey ==== */
+@media (max-width: 599px) {
+    .Electronic-Appliances {
+        flex: 0 0 80% !important;
+        max-width: 80% !important;
+    }
+}
 @media(max-width:992px){
     .Electronic-Appliances {
      flex: 0 0 45%;
