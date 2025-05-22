@@ -6,7 +6,7 @@ function demo() {
 
 
 
-  let cards = document.querySelectorAll('.break-fast-inner,.contact-1, .contact-2');
+  let cards = document.querySelectorAll('.Electronic-Appliances,.contact-1, .contact-2');
 
   function animateCardsOnScroll () {
     cards.forEach(card => {
@@ -26,26 +26,14 @@ function demo() {
 
 
 
-//  let card = document.querySelectorAll('.break-fast-inner').forEach((card, index) => {
-//     card.addEventListener('click', () => {
-//       const popup = document.querySelectorAll('.popup')[index];
-//       popup.style.display = 'flex';  // Popup ko show karo
-//     });
-//   });
-  
 
-let card = document.querySelectorAll('.break-fast-inner').forEach((card, index) => {
+     
+let card = document.querySelectorAll('.Electronic-Appliances').forEach((card, index) => {
 card.addEventListener('click',() =>{
   let popups =document.querySelectorAll('.popup')[index];
   popups.style.display='flex';
 });
 });
-
-
-
-
-
-
 
   document.querySelectorAll('.close-btn').forEach(closeBtn => {
     closeBtn.addEventListener('click', () => {
@@ -94,3 +82,29 @@ document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.clientX + 'px';
   cursor.style.top = e.clientY + 'px';
 });
+
+
+const containers = document.querySelectorAll('.Air-Conditioner-Container');
+const leftBtns = document.querySelectorAll('.left');
+const rightBtns = document.querySelectorAll('.right');
+
+const scrollAmount = 250;
+
+leftBtns.forEach((btn, index) => {
+  btn.onclick = () => {
+    containers[index].scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  };
+});
+
+rightBtns.forEach((btn, index) => {
+  btn.onclick = () => {
+    containers[index].scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  };
+});
+
+ function toggleMenu() {
+    document.getElementById("navbar").classList.toggle("active");
+  }
+
+
+
