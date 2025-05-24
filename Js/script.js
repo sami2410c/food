@@ -102,9 +102,11 @@ rightBtns.forEach((btn, index) => {
   };
 });
 
- function toggleMenu() {
-    document.getElementById("navbar").classList.toggle("active");
-  }
+function toggleMenu() {
+  const navMenu = document.getElementById('nav-menu');
+  navMenu.classList.toggle('active');
+}
+
 
 
 

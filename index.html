@@ -25,22 +25,43 @@
       <div class="corsur"></div>
     </div>
     
-    <header>
-<img class="logo" src="images/logo-removebg-preview.png" alt="" width="80px" height="70px">
-      <div class="toggle" onclick="toggleMenu()"></div>
-  <nav id="navbar">
-      <ul>
+  <div class="sale">
+    <h3>Enjoy 10% - 15% off</h3>
+    <button class="btn1">Shop Now</button>
+  </div>
+
+  <div class="img">
+    <img src="images/logo-removebg-preview.png" alt="" width="100px">
+  </div>
+
+  <header>
+    <div class="toggle" onclick="toggleMenu()">
+      <span class="sp1"></span>
+      <span class="sp2"></span>
+      <span class="sp3"></span>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav-dr" id="nav-menu">
         <li><a href="#">Home</a></li>
         <li><a href="#about">About Us</a></li>
-        <li><a href="#product">Products</a></li>
         <li><a href="#contact">Contact Us</a></li>
-        <li><a href="#">Service</a></li>
-</ul>
-         <div class="nav-icons">
+        <li class="dropdown">
+          <a href="#product">Products ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="#Air">Air Conditioner</a></li>
+            <li><a href="#Wash">Washing Machine</a></li>
+            <li><a href="#Refrige">Refrigerator</a></li>
+            <li><a href="#Micro">Microwave</a></li>
+            <li><a href="#Led">LED</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Services</a></li>
+        
+        <div class="nav-icons" >
         <i class="fas fa-user"></i>
-
       </div>
-      <div class="user-input">
+       <div class="user-input">
         <i class="fa fa-envelope" style="font-size:18px"></i><label for="email">Email</label>
         <input type="Email" id="useremail" class="form-control">
 
@@ -54,15 +75,12 @@
 
         <p>Don't have an account? <a href="#">Register</a></p>
       </div>
-      <div class="nav-icons-2">
-       <i class="fas fa-shopping-cart"></i>
+      </ul>
 
-      </div>
-     
+      
+    </nav>
+  </header>
 
-      </nav>
-
-    </header>
     <img class="img1" src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?fm=jpg&q=60&w=3000" alt="">
 
 
@@ -100,14 +118,17 @@
     <!-- ===== slider section End ===== -->
 
     <!-- ===== Text section start ===== -->
-    <div class="text-0">
-      <div class="container-text" id="about">
-        <h2 class="text-1">YUMMY FOOD</h2>
-        <p class="text-2">Welcome to Yummy Food, your one-stop spot for delicious and quality meals for all tastes.
-          Explore our latest menu and find the perfect dish for any occasion. Order now and treat yourself to flavor
-          like never before!</p>
-      </div>
-    </div>
+   <div class="text-0">
+  <div class="container-text" id="about">
+    <h2 class="text-1">ELECTRONIC ZONE</h2>
+    <p class="text-2">
+      Welcome to Electronic Zone — your trusted hub for top-quality electronic appliances. 
+      Discover the latest in smart technology, from home essentials to high-performance gadgets. 
+      Whether you're upgrading your kitchen or your workspace, we’ve got you covered. 
+      Shop now and bring innovation home!
+    </p>
+  </div>
+</div>
     <!-- ===== Text section End ===== -->
     <!-- ==== Items-button-start ===== -->
     <div class="Items" id="product">
@@ -126,7 +147,7 @@
     <!-- ====== A/C Start ======= -->
      <!-- ==== slider ==== -->
 
-     <div class="sliders">
+     <div class="sliders" id="slide">
       <div class="left"></div>
       <div class="right"></div>
      </div>
@@ -784,10 +805,11 @@
         $("#Refrige").hide();
         $("#Micro").hide();
         $("#Led").hide();
+        
 
       });
 
-      $("#washtn").click(function () {
+      $("#washbtn").click(function () {
         $("#Air").hide();
         $("#Wash").show();
         $("#Refrige").hide();
